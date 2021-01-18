@@ -130,7 +130,7 @@ class DailyMotionProvider extends BaseVideoProvider
      */
     public function updateMetadata(MediaInterface $media, $force = false)
     {
-        $url = sprintf('http://www.dailymotion.com/services/oembed?url=http://www.dailymotion.com/video/%s&format=json', $media->getProviderReference());
+        $url = sprintf('https://www.dailymotion.com/services/oembed?url=https://www.dailymotion.com/video/%s&format=json', $media->getProviderReference());
 
         try {
             $metadata = $this->getMetadata($media, $url);
@@ -157,6 +157,6 @@ class DailyMotionProvider extends BaseVideoProvider
      */
     public function getDownloadResponse(MediaInterface $media, $format, $mode, array $headers = array())
     {
-        return new RedirectResponse(sprintf('http://www.dailymotion.com/video/%s', $media->getProviderReference()), 302, $headers);
+        return new RedirectResponse(sprintf('https://www.dailymotion.com/video/%s', $media->getProviderReference()), 302, $headers);
     }
 }

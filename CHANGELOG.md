@@ -7,6 +7,11 @@ A [BC BREAK] means the update will break the project for many reasons:
 * new dependencies
 * class refactoring
 
+### 2021-01-18
+
+* Fix http calls to https calls in this video providers : youtube, vimeo, dailymotion
+* Adding phpunit to require-dev dependency
+
 ### 2015-06-29
 
 * Bump `jms/serializer-bundle` requirement to include ~1.0
